@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    private let welcomeLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Welcome".localized()
+        label.font = .systemFont(ofSize: 35, weight: .bold)
+        label.textAlignment = .center
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.addSubview(welcomeLabel)
+        welcomeLabel.frame = view.bounds
     }
-
-
+    
+    
 }
 
